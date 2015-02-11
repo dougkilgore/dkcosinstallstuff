@@ -1,0 +1,13 @@
+#cloud-config
+
+# Set Hostname
+hostname: dktest01
+
+# Set SSH Keys
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA757Lx4Qb8y77rRJGgFiveKMVxiYZ1piqI/PERcDL5LAEPOUrnOtHgyA+0C9ygmButBbgKO7ajT0oUETL2UihZr9CAyJspFcaPkIQo3C0Q68adepMmybg/p17xgzXPOgO3fQuRkb7i+4s+kzKeqBRlLBchxbC8/uoC47DdLRhkeLHVEYpaYDqlNlYlShKsT7xS83xSMBLus3BZ26YgN5+JsP6NJdHrf5ody1VqcjZXYlBAw1yhKoRZD+fWiYzTlrL9G/qFAqZXODdyPgXO3Cy4hWVQxi/C5UZy9GaFd+kRuRXOAsjxUrjCaiNWsIV9VJu1f2nBX0MibrNwSN5HMRyAQ== root@localhost.localdomain
+
+coreos:
+  etcd:
+    # generate a new token for each unique cluster from https://discovery.etcd.io/new
+    discovery: https://discovery.etcd.io/12345678901234567890123456789012
